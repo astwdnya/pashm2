@@ -1,0 +1,21 @@
+دستورات نصب yt-dlp در PythonAnywhere:
+
+مشکل: تضاد نسخه requests
+
+راه‌حل:
+
+1. آپدیت requests و نصب yt-dlp:
+pip install --upgrade requests yt-dlp --user
+
+2. یا نصب از requirements.txt جدید:
+pip install -r requirements.txt --user --upgrade
+
+3. بررسی نصب:
+python -c "import yt_dlp; print(yt_dlp.version.__version__)"
+
+4. اجرای ربات:
+pkill -f main.py
+python main.py
+
+یا به صورت یکجا:
+pip install --upgrade requests yt-dlp --user && pkill -f main.py && python main.py

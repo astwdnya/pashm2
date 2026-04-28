@@ -1,0 +1,176 @@
+# ربات تلگرام دانلود و ارسال فایل
+
+ربات قدرتمند تلگرام برای دانلود و ارسال فایل از بیش از 1000 سایت!
+
+## ویژگی‌ها
+
+- 🎬 **دانلود از سایت‌های ویدیویی** (با yt-dlp):
+  - YouTube, Vimeo, Dailymotion
+  - Pornhub, Xvideos, Xnxx, Redtube
+  - Twitter, Instagram, TikTok, Facebook
+  - و بیش از 1000 سایت دیگر!
+- 🎞️ **دانلود GIF** از سایت‌های GIF:
+  - Gfycat, Redgifs
+  - myteenwebcam.com, xgroovy.com
+  - xgifer.com, hentaigifz.com, hardcoregify.com
+  - و سایت‌های دیگر
+- 📥 **دانلود فایل مستقیم** از هر لینک
+- 📹 ارسال ویدیوها به صورت ویدیو
+- 🎞️ ارسال GIF به صورت Animation
+- 📄 ارسال سایر فایل‌ها به صورت سند
+- 📊 نمایش حجم و سرعت دانلود
+- ⚡ بدون محدودیت حجم فایل
+- 📈 نوار پیشرفت دانلود با جزئیات کامل
+
+## نصب و راه‌اندازی
+
+### 1. نصب پایتون
+مطمئن شوید که Python 3.8 یا بالاتر نصب شده است.
+
+### 2. نصب کتابخانه‌ها
+```bash
+pip install -r requirements.txt
+```
+
+### 3. دریافت توکن ربات
+1. به [@BotFather](https://t.me/BotFather) در تلگرام مراجعه کنید
+2. دستور `/newbot` را ارسال کنید
+3. نام و نام کاربری ربات را وارد کنید
+4. توکن دریافتی را کپی کنید
+
+### 4. تنظیم توکن
+فایل `.env` را باز کرده و توکن ربات خود را تنظیم کنید:
+```env
+BOT_TOKEN=YOUR_BOT_TOKEN_HERE
+API_ID=YOUR_API_ID
+API_HASH=YOUR_API_HASH
+```
+
+**نکته:** توکن و API credentials به صورت پیش‌فرض در کد تنظیم شده است، اما استفاده از فایل `.env` امن‌تر است.
+
+### 5. اجرای ربات
+```bash
+python main.py
+```
+
+## دیپلوی روی PythonAnywhere
+
+برای اجرا روی PythonAnywhere (پلن رایگان):
+
+1. فایل `.env` را ویرایش کنید و پراکسی را فعال کنید:
+```env
+PROXY_URL=http://proxy.server:3128
+```
+
+2. در PythonAnywhere، پراکسی را از تنظیمات Account دریافت کنید
+
+3. ربات به صورت هوشمند کار می‌کند:
+   - پراکسی **فقط** برای Telegram Bot API استفاده می‌شود
+   - دانلود فایل‌ها **بدون پراکسی** انجام می‌شود (دسترسی به همه سایت‌ها)
+
+**نکته:** برای Render.com یا سرورهای دیگر، پراکسی نیاز نیست و می‌توانید آن را غیرفعال نگه دارید.
+
+جزئیات بیشتر در فایل `PYTHONANYWHERE.md`
+
+## نحوه استفاده
+
+1. ربات را در تلگرام استارت کنید: `/start`
+2. لینک دانلود فایل را ارسال کنید
+3. صبر کنید تا فایل دانلود و ارسال شود
+
+## مثال‌ها
+
+### دانلود از YouTube
+```
+ارسال لینک: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+```
+
+### دانلود از Pornhub/Xvideos
+```
+ارسال لینک: https://www.pornhub.com/view_video.php?viewkey=...
+ارسال لینک: https://www.xvideos.com/video...
+```
+
+### دانلود از Twitter/Instagram
+```
+ارسال لینک: https://twitter.com/user/status/...
+ارسال لینک: https://www.instagram.com/p/...
+```
+
+### دانلود GIF
+```
+ارسال لینک: https://myteenwebcam.com/thefapp/watch/134194
+ارسال لینک: https://xgroovy.com/gifs/610250/horny-step-siblings-get-interrupted-while-banging/
+ارسال لینک: https://xgifer.com/gif/omg-lil-bro-your-cock-is-huge/
+ارسال لینک: https://hentaigifz.com/sex-with-two-sisters/
+ارسال لینک: https://hardcoregify.com/gif/sister-got-drunk/
+ارسال لینک: https://gfycat.com/...
+ارسال لینک: https://redgifs.com/watch/...
+```
+
+### دانلود فایل مستقیم
+```
+ارسال لینک: https://example.com/file.zip
+ارسال لینک: https://example.com/video.mp4
+```
+
+### دانلود فایل ZIP
+```
+https://example.com/archive.zip
+```
+
+### دانلود ویدیو
+```
+https://example.com/video.mp4
+```
+
+### دانلود فایل PDF
+```
+https://example.com/document.pdf
+```
+
+### دانلود فایل ZIP
+```
+https://example.com/archive.zip
+```
+
+## فرمت‌های ویدیویی پشتیبانی شده
+
+- MP4
+- AVI
+- MKV
+- MOV
+- WMV
+- FLV
+- WebM
+- M4V
+- MPEG/MPG
+
+## رفع مشکلات
+
+### خطای توکن نامعتبر
+- مطمئن شوید توکن را به درستی کپی کرده‌اید
+- توکن نباید فاصله اضافی داشته باشد
+
+### خطای دانلود فایل
+- لینک باید معتبر و در دسترس باشد
+- سرور باید از دانلود مستقیم پشتیبانی کند
+
+### فایل ارسال نمی‌شود
+- اتصال اینترنت را بررسی کنید
+- مطمئن شوید فایل به درستی دانلود شده است
+
+## توسعه
+
+برای افزودن قابلیت‌های جدید در فایل `main.py`:
+- تابع `handle_message` را ویرایش کنید
+- فرمت‌های جدید را به `is_video_file` اضافه کنید
+- دستورات جدید را با `CommandHandler` اضافه کنید
+
+## لایسنس
+
+این پروژه آزاد و رایگان است.
+
+## پشتیبانی
+
+در صورت بروز مشکل، لاگ‌های ربات را بررسی کنید.

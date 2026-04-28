@@ -1,0 +1,21 @@
+python-telegram-bot[job-queue]==21.9
+requests>=2.32.2
+python-dotenv==1.0.1
+flask==3.1.0
+gunicorn==23.0.0
+yt-dlp==2025.11.12
+telegram==0.0.1
+pyrogram==2.0.106
+tgcrypto==1.2.5
+
+# ========== نیازمندی‌های جدید برای قابلیت PDF ==========
+pyppeteer==2.0.0           # مرورگر بدون رابط برای تبدیل HTML به PDF
+nest-asyncio==1.6.0        # پشتیبانی از asyncio تودرتو
+aiohttp==3.11.11           # درخواست‌های异步 HTTP
+cryptography==44.0.0       # نیاز امنیتی pyppeteer
+chromium-browser           # نیاز سیستمی (برای Ubuntu/Debian)
+
+# ========== نیازمندی‌های اختیاری برای بهبود عملکرد ==========
+pillow==11.0.0             # پردازش تصاویر (اختیاری)
+lxml==5.3.0                # پردازش سریعتر HTML (اختیاری)
+beautifulsoup4==4.12.3     # پارسینگ HTML (اختیاری)

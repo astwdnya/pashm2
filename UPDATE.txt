@@ -1,0 +1,22 @@
+دستورات برای فیکس خطا در PythonAnywhere:
+
+مشکل 1: نسخه اشتباه python-telegram-bot
+مشکل 2: پورت 10000 در حال استفاده
+
+راه‌حل:
+
+1. ابتدا پروسه‌های قبلی را متوقف کنید:
+pkill -f main.py
+
+2. حذف نسخه قدیمی و نصب نسخه صحیح:
+pip uninstall python-telegram-bot httpx -y
+pip install python-telegram-bot==21.9 --user
+
+3. اجرای ربات:
+python main.py
+
+یا به صورت یکجا:
+pkill -f main.py && pip uninstall python-telegram-bot httpx -y && pip install python-telegram-bot==21.9 --user && python main.py
+
+نکته: اگر باز هم خطای نسخه داشتید:
+pip install --upgrade --force-reinstall python-telegram-bot==21.9 --user
