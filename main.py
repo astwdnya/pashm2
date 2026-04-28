@@ -10,6 +10,7 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, CallbackQueryHandler
 from telegram.request import HTTPXRequest
 from dotenv import load_dotenv
+from web_to_pdf import pdf_command
 try:
     from pyrogram.client import Client
 except ImportError:
@@ -612,7 +613,7 @@ async def download_video_ytdlp(url: str, status_message=None) -> tuple:
         origin_url = f"{parsed.scheme}://{parsed.netloc}"
         base_headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept': 'text/html,ation/xhtml+xml,ation/xml;q=0.9,image/webp,*/*;q=0.8',
             'Accept-Language': 'en-US,en;q=0.5',
             'Accept-Encoding': 'gzip, deflate',
             'DNT': '1',
@@ -644,7 +645,7 @@ async def download_video_ytdlp(url: str, status_message=None) -> tuple:
         if is_reddit:
             base_headers.update({
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
-                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+                'Accept': 'text/html,ation/xhtml+xml,ation/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
                 'Accept-Language': 'en-US,en;q=0.9',
                 'Sec-Fetch-Dest': 'document',
                 'Sec-Fetch-Mode': 'navigate',
@@ -1321,7 +1322,7 @@ def main():
     application.add_handler(CommandHandler("check", check_user))
     application.add_handler(CallbackQueryHandler(admin_callback))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
-    
+    application.add_handler(CommandHandler("pdf", pdf_command))
     # اضافه کردن هندلر خطا
     application.add_error_handler(error_handler)
     
